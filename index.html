@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Rock Paper Scissors</h1>
+  <p class="sub" id="sub">Pick a hand. Beat the computer.</p>
+  <div class="mode" role="group" aria-label="Number of players">
+    <button data-n="1" aria-pressed="true">1 player</button>
+    <button data-n="2" aria-pressed="false">2 players</button>
+  </div>
+
+  <div class="score" aria-live="polite">
+    <div id="you"><b>0</b><span id="l1">You</span></div>
+    <div id="ties"><b>0</b><span>Ties</span></div>
+    <div id="cpu"><b>0</b><span id="l2">Computer</span></div>
+  </div>
+
+  <div class="arena">
+    <div class="side"><small id="n1">You</small><span class="hand" id="h1">❔</span></div>
+    <div class="vs">vs</div>
+    <div class="side"><small id="n2">Computer</small><span class="hand" id="h2">❔</span></div>
+  </div>
+  <div id="msg" aria-live="polite">Choose rock, paper or scissors.</div>
+
+  <div class="picks">
+    <button class="pick" data-m="rock"><span class="e">✊</span><span class="l">Rock</span></button>
+    <button class="pick" data-m="paper"><span class="e">✋</span><span class="l">Paper</span></button>
+    <button class="pick" data-m="scissors"><span class="e">✌️</span><span class="l">Scissors</span></button>
+  </div>
+
+  <div id="hist" aria-label="Last 10 rounds"></div>
+  <button class="reset" id="reset">Reset score</button>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
